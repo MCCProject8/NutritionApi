@@ -1,5 +1,7 @@
+import model.Fields;
 import model.Hit;
 import model.NutritionData;
+import model.itemData;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
@@ -27,6 +29,25 @@ public class Main {
 			public void success(NutritionData nutritionData, Response response)
 			{
 				printNutritionData( nutritionData);
+				
+			}
+
+			@Override
+			public void failure(RetrofitError retrofitError)
+			{
+
+			}
+		});
+		
+		GetSearchFood getItemFacts;
+		
+		getItemFacts = restAdapter.create(GetSearchFood.class );
+		getItemFacts.itemResults("513fceb475b8dbbc210008e6", Config.appId, Config.appKey, new Callback<itemData>() {
+			
+			@Override
+			public void success(itemData itemD, Response response)
+			{
+				
 			}
 
 			@Override
