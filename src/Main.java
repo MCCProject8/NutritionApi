@@ -39,15 +39,13 @@ public class Main {
 			}
 		});
 		
-		GetSearchFood getItemFacts;
 		
-		getItemFacts = restAdapter.create(GetSearchFood.class );
-		getItemFacts.itemResults("513fceb475b8dbbc210008e6", Config.appId, Config.appKey, new Callback<itemData>() {
+		getSearchFoodAPI.itemResults("513fceb475b8dbbc210008e6", Config.appId, Config.appKey, new Callback<itemData>() {
 			
 			@Override
 			public void success(itemData itemD, Response response)
 			{
-				
+				System.out.print(itemD.getBrandId());
 			}
 
 			@Override
@@ -67,8 +65,13 @@ public class Main {
 
 			for (Hit h : nutritionData.hits )
 			{
-				System.out.println(" Hit id:" + h.Id + " Hit Type: " + h.Type );
+				System.out.println(" Hit id:" + h.Id + " Hit Type: " + h.Type + " Brand Name: " + h.fields.brandName +
+						" Item Name: " + h.fields.itemName); 
+
+				
 			}
+			
+			
 
 			System.out.println( "Done");
 		}
