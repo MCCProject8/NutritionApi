@@ -46,7 +46,7 @@ public class Adapter {
 			@Override
 			public void success(itemData itemD, Response response)
 			{
-	
+				System.out.println(itemD.itemName);
 			}
 	
 			@Override

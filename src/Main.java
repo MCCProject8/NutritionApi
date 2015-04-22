@@ -44,7 +44,7 @@ public class Main extends JFrame {
 		setLocationRelativeTo(null);
 		
 		SearchPanel searchPanel = new SearchPanel();
-		searchPanel.setBounds(0, 0, WIDTH / 3, HEIGHT);
+		searchPanel.setBounds(0, 0, WIDTH / 2, HEIGHT);
 		
 		add(searchPanel);
 

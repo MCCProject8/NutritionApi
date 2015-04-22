@@ -1,12 +1,15 @@
 import java.awt.Color;
 
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
 
 
 public class SearchPanel extends JPanel {
 	
 	public JTextField searchField;
+	public static JTextArea a;
 
 	public SearchPanel() {
 		
@@ -22,9 +25,12 @@ public class SearchPanel extends JPanel {
 		
 		GlobalAdapter.adapter.searchForFood();
 		
+		a = new JTextArea();
 		
+		a.setBounds(30,100,400, 300);
 		
 		add(searchField);
+		add(a);
 		
 	}
 
