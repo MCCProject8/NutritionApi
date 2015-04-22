@@ -18,4 +18,10 @@ public class Hit {
     public Double Score;
 
     public Fields fields;
+    
+    
+    public String getId()
+    {
+    	return Id;
+    }
 }

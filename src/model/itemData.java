@@ -1,785 +1,136 @@
 package model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class itemData {
 
-private Object oldApiId;
-private String itemId;
-private String itemName;
-private int legLocId;
-private String brandId;
-private String brandName;
-private Object itemDescription;
-private String updatedAt;
-private Object nfIngredientStatement;
-private float nfWaterGrams;
-private float nfCalories;
-private float nfCaloriesFromFat;
-private float nfTotalFat;
-private float nfSaturatedFat;
-private Object nfTransFattyAcid;
-private float nfPolyunsaturatedFat;
-private float nfMonounsaturatedFat;
-private float nfCholesterol;
-private float nfSodium;
-private int nfTotalCarbohydrate;
-private int nfDietaryFiber;
-private Object nfSugars;
-private float nfProtein;
-private int nfVitaminADv;
-private int nfVitaminCDv;
-private int nfCalciumDv;
-private int nfIronDv;
-private Object nfRefusePct;
-private Object nfServingsPerContainer;
-private float nfServingSizeQty;
-private String nfServingSizeUnit;
-private int nfServingWeightGrams;
-private Object allergenContainsMilk;
-private Object allergenContainsEggs;
-private Object allergenContainsFish;
-private Object allergenContainsShellfish;
-private Object allergenContainsTreeNuts;
-private Object allergenContainsPeanuts;
-private Object allergenContainsWheat;
-private Object allergenContainsSoybeans;
-private Object allergenContainsGluten;
-
-/**
-* 
-* @return
-* The oldApiId
-*/
-public Object getOldApiId() {
-return oldApiId;
-}
-
-/**
-* 
-* @param oldApiId
-* The old_api_id
-*/
-public void setOldApiId(Object oldApiId) {
-this.oldApiId = oldApiId;
-}
-
-/**
-* 
-* @return
-* The itemId
-*/
-public String getItemId() {
-return itemId;
-}
-
-/**
-* 
-* @param itemId
-* The item_id
-*/
-public void setItemId(String itemId) {
-this.itemId = itemId;
-}
-
-/**
-* 
-* @return
-* The itemName
-*/
-public String getItemName() {
-return itemName;
-}
-
-/**
-* 
-* @param itemName
-* The item_name
-*/
-public void setItemName(String itemName) {
-this.itemName = itemName;
-}
-
-/**
-* 
-* @return
-* The legLocId
-*/
-public int getLegLocId() {
-return legLocId;
-}
-
-/**
-* 
-* @param legLocId
-* The leg_loc_id
-*/
-public void setLegLocId(int legLocId) {
-this.legLocId = legLocId;
-}
-
-/**
-* 
-* @return
-* The brandId
-*/
-public String getBrandId() {
-return brandId;
-}
-
-/**
-* 
-* @param brandId
-* The brand_id
-*/
-public void setBrandId(String brandId) {
-this.brandId = brandId;
-}
-
-/**
-* 
-* @return
-* The brandName
-*/
-public String getBrandName() {
-return brandName;
-}
-
-/**
-* 
-* @param brandName
-* The brand_name
-*/
-public void setBrandName(String brandName) {
-this.brandName = brandName;
-}
-
-/**
-* 
-* @return
-* The itemDescription
-*/
-public Object getItemDescription() {
-return itemDescription;
-}
-
-/**
-* 
-* @param itemDescription
-* The item_description
-*/
-public void setItemDescription(Object itemDescription) {
-this.itemDescription = itemDescription;
-}
-
-/**
-* 
-* @return
-* The updatedAt
-*/
-public String getUpdatedAt() {
-return updatedAt;
-}
-
-/**
-* 
-* @param updatedAt
-* The updated_at
-*/
-public void setUpdatedAt(String updatedAt) {
-this.updatedAt = updatedAt;
-}
-
-/**
-* 
-* @return
-* The nfIngredientStatement
-*/
-public Object getNfIngredientStatement() {
-return nfIngredientStatement;
-}
-
-/**
-* 
-* @param nfIngredientStatement
-* The nf_ingredient_statement
-*/
-public void setNfIngredientStatement(Object nfIngredientStatement) {
-this.nfIngredientStatement = nfIngredientStatement;
-}
-
-/**
-* 
-* @return
-* The nfWaterGrams
-*/
-public float getNfWaterGrams() {
-return nfWaterGrams;
-}
-
-/**
-* 
-* @param nfWaterGrams
-* The nf_water_grams
-*/
-public void setNfWaterGrams(float nfWaterGrams) {
-this.nfWaterGrams = nfWaterGrams;
-}
-
-/**
-* 
-* @return
-* The nfCalories
-*/
-public float getNfCalories() {
-return nfCalories;
-}
-
-/**
-* 
-* @param nfCalories
-* The nf_calories
-*/
-public void setNfCalories(float nfCalories) {
-this.nfCalories = nfCalories;
-}
-
-/**
-* 
-* @return
-* The nfCaloriesFromFat
-*/
-public float getNfCaloriesFromFat() {
-return nfCaloriesFromFat;
-}
-
-/**
-* 
-* @param nfCaloriesFromFat
-* The nf_calories_from_fat
-*/
-public void setNfCaloriesFromFat(float nfCaloriesFromFat) {
-this.nfCaloriesFromFat = nfCaloriesFromFat;
-}
-
-/**
-* 
-* @return
-* The nfTotalFat
-*/
-public float getNfTotalFat() {
-return nfTotalFat;
-}
-
-/**
-* 
-* @param nfTotalFat
-* The nf_total_fat
-*/
-public void setNfTotalFat(float nfTotalFat) {
-this.nfTotalFat = nfTotalFat;
-}
-
-/**
-* 
-* @return
-* The nfSaturatedFat
-*/
-public float getNfSaturatedFat() {
-return nfSaturatedFat;
-}
-
-/**
-* 
-* @param nfSaturatedFat
-* The nf_saturated_fat
-*/
-public void setNfSaturatedFat(float nfSaturatedFat) {
-this.nfSaturatedFat = nfSaturatedFat;
-}
-
-/**
-* 
-* @return
-* The nfTransFattyAcid
-*/
-public Object getNfTransFattyAcid() {
-return nfTransFattyAcid;
-}
-
-/**
-* 
-* @param nfTransFattyAcid
-* The nf_trans_fatty_acid
-*/
-public void setNfTransFattyAcid(Object nfTransFattyAcid) {
-this.nfTransFattyAcid = nfTransFattyAcid;
-}
-
-/**
-* 
-* @return
-* The nfPolyunsaturatedFat
-*/
-public float getNfPolyunsaturatedFat() {
-return nfPolyunsaturatedFat;
-}
-
-/**
-* 
-* @param nfPolyunsaturatedFat
-* The nf_polyunsaturated_fat
-*/
-public void setNfPolyunsaturatedFat(float nfPolyunsaturatedFat) {
-this.nfPolyunsaturatedFat = nfPolyunsaturatedFat;
-}
-
-/**
-* 
-* @return
-* The nfMonounsaturatedFat
-*/
-public float getNfMonounsaturatedFat() {
-return nfMonounsaturatedFat;
-}
-
-/**
-* 
-* @param nfMonounsaturatedFat
-* The nf_monounsaturated_fat
-*/
-public void setNfMonounsaturatedFat(float nfMonounsaturatedFat) {
-this.nfMonounsaturatedFat = nfMonounsaturatedFat;
-}
-
-/**
-* 
-* @return
-* The nfCholesterol
-*/
-public float getNfCholesterol() {
-return nfCholesterol;
-}
-
-/**
-* 
-* @param nfCholesterol
-* The nf_cholesterol
-*/
-public void setNfCholesterol(float nfCholesterol) {
-this.nfCholesterol = nfCholesterol;
-}
-
-/**
-* 
-* @return
-* The nfSodium
-*/
-public float getNfSodium() {
-return nfSodium;
-}
-
-/**
-* 
-* @param nfSodium
-* The nf_sodium
-*/
-public void setNfSodium(float nfSodium) {
-this.nfSodium = nfSodium;
-}
+@SerializedName("old_api_id")
+public String oldApiId;
+	
+@SerializedName("item_id")
+public String itemId;
 
-/**
-* 
-* @return
-* The nfTotalCarbohydrate
-*/
-public int getNfTotalCarbohydrate() {
-return nfTotalCarbohydrate;
-}
-
-/**
-* 
-* @param nfTotalCarbohydrate
-* The nf_total_carbohydrate
-*/
-public void setNfTotalCarbohydrate(int nfTotalCarbohydrate) {
-this.nfTotalCarbohydrate = nfTotalCarbohydrate;
-}
-
-/**
-* 
-* @return
-* The nfDietaryFiber
-*/
-public int getNfDietaryFiber() {
-return nfDietaryFiber;
-}
-
-/**
-* 
-* @param nfDietaryFiber
-* The nf_dietary_fiber
-*/
-public void setNfDietaryFiber(int nfDietaryFiber) {
-this.nfDietaryFiber = nfDietaryFiber;
-}
+@SerializedName("item_name")
+public String itemName;
 
-/**
-* 
-* @return
-* The nfSugars
-*/
-public Object getNfSugars() {
-return nfSugars;
-}
+@SerializedName("brand_id")
+public String brandId;
 
-/**
-* 
-* @param nfSugars
-* The nf_sugars
-*/
-public void setNfSugars(Object nfSugars) {
-this.nfSugars = nfSugars;
-}
+@SerializedName("brand_name")
+public String brandName;
 
-/**
-* 
-* @return
-* The nfProtein
-*/
-public float getNfProtein() {
-return nfProtein;
-}
+@SerializedName("item_description")
+public String itemDesc;
 
-/**
-* 
-* @param nfProtein
-* The nf_protein
-*/
-public void setNfProtein(float nfProtein) {
-this.nfProtein = nfProtein;
-}
+@SerializedName("nf_ingredient_statement")
+public String ingrStm;
 
-/**
-* 
-* @return
-* The nfVitaminADv
-*/
-public int getNfVitaminADv() {
-return nfVitaminADv;
-}
+@SerializedName("nf_water_grams")
+public Float waterGrams;
 
-/**
-* 
-* @param nfVitaminADv
-* The nf_vitamin_a_dv
-*/
-public void setNfVitaminADv(int nfVitaminADv) {
-this.nfVitaminADv = nfVitaminADv;
-}
+@SerializedName("nf_calories")
+public Float calories;
 
-/**
-* 
-* @return
-* The nfVitaminCDv
-*/
-public int getNfVitaminCDv() {
-return nfVitaminCDv;
-}
+@SerializedName("nf_calories_from_fat")
+public Float calFromFat;
 
-/**
-* 
-* @param nfVitaminCDv
-* The nf_vitamin_c_dv
-*/
-public void setNfVitaminCDv(int nfVitaminCDv) {
-this.nfVitaminCDv = nfVitaminCDv;
-}
+@SerializedName("nf_total_fat")
+public Float totalFat;
 
-/**
-* 
-* @return
-* The nfCalciumDv
-*/
-public int getNfCalciumDv() {
-return nfCalciumDv;
-}
+@SerializedName("nf_saturated_fat")
+public Float satFat;
 
-/**
-* 
-* @param nfCalciumDv
-* The nf_calcium_dv
-*/
-public void setNfCalciumDv(int nfCalciumDv) {
-this.nfCalciumDv = nfCalciumDv;
-}
+@SerializedName("nf_trans_fatty_acid")
+public Float transFat;
 
-/**
-* 
-* @return
-* The nfIronDv
-*/
-public int getNfIronDv() {
-return nfIronDv;
-}
+@SerializedName("nf_polyunsaturated_fat")
+public Float polyFat;
 
-/**
-* 
-* @param nfIronDv
-* The nf_iron_dv
-*/
-public void setNfIronDv(int nfIronDv) {
-this.nfIronDv = nfIronDv;
-}
+@SerializedName("nf_monounsaturated_fat")
+public Float monoFat;
 
-/**
-* 
-* @return
-* The nfRefusePct
-*/
-public Object getNfRefusePct() {
-return nfRefusePct;
-}
+@SerializedName("nf_cholesterol")
+public Float cholesterol;
 
-/**
-* 
-* @param nfRefusePct
-* The nf_refuse_pct
-*/
-public void setNfRefusePct(Object nfRefusePct) {
-this.nfRefusePct = nfRefusePct;
-}
+@SerializedName("nf_sodium")
+public Float sodium;
 
-/**
-* 
-* @return
-* The nfServingsPerContainer
-*/
-public Object getNfServingsPerContainer() {
-return nfServingsPerContainer;
-}
+@SerializedName("nf_total_carbohydrate")
+public Float totalCarbs;
 
-/**
-* 
-* @param nfServingsPerContainer
-* The nf_servings_per_container
-*/
-public void setNfServingsPerContainer(Object nfServingsPerContainer) {
-this.nfServingsPerContainer = nfServingsPerContainer;
-}
+@SerializedName("nf_dietary_fiber")
+public Float dietaryFiber;
 
-/**
-* 
-* @return
-* The nfServingSizeQty
-*/
-public float getNfServingSizeQty() {
-return nfServingSizeQty;
-}
+@SerializedName("nf_sugars")
+public Float sugar;
 
-/**
-* 
-* @param nfServingSizeQty
-* The nf_serving_size_qty
-*/
-public void setNfServingSizeQty(float nfServingSizeQty) {
-this.nfServingSizeQty = nfServingSizeQty;
-}
+@SerializedName("nf_protein")
+public Float protein;
 
-/**
-* 
-* @return
-* The nfServingSizeUnit
-*/
-public String getNfServingSizeUnit() {
-return nfServingSizeUnit;
-}
+@SerializedName("nf_vitamin_a_dv")
+public int vitaminA;
 
-/**
-* 
-* @param nfServingSizeUnit
-* The nf_serving_size_unit
-*/
-public void setNfServingSizeUnit(String nfServingSizeUnit) {
-this.nfServingSizeUnit = nfServingSizeUnit;
-}
+@SerializedName("nf_vitamin_c_dv")
+public int vitaminC;
 
-/**
-* 
-* @return
-* The nfServingWeightGrams
-*/
-public int getNfServingWeightGrams() {
-return nfServingWeightGrams;
-}
+@SerializedName("nf_calcium_dv")
+public int calcium;
 
-/**
-* 
-* @param nfServingWeightGrams
-* The nf_serving_weight_grams
-*/
-public void setNfServingWeightGrams(int nfServingWeightGrams) {
-this.nfServingWeightGrams = nfServingWeightGrams;
-}
+@SerializedName("nf_iron_dv")
+public int iron;
 
-/**
-* 
-* @return
-* The allergenContainsMilk
-*/
-public Object getAllergenContainsMilk() {
-return allergenContainsMilk;
-}
+@SerializedName("nf_refuse_pct")
+public int refuse;
 
-/**
-* 
-* @param allergenContainsMilk
-* The allergen_contains_milk
-*/
-public void setAllergenContainsMilk(Object allergenContainsMilk) {
-this.allergenContainsMilk = allergenContainsMilk;
-}
+@SerializedName("nf_servings_per_container")
+public int servingPerContainer;
 
-/**
-* 
-* @return
-* The allergenContainsEggs
-*/
-public Object getAllergenContainsEggs() {
-return allergenContainsEggs;
-}
+@SerializedName("nf_serving_size_qty")
+public int servingQty;
 
-/**
-* 
-* @param allergenContainsEggs
-* The allergen_contains_eggs
-*/
-public void setAllergenContainsEggs(Object allergenContainsEggs) {
-this.allergenContainsEggs = allergenContainsEggs;
-}
+@SerializedName("nf_serving_size_unit")
+public String servingSizeunit;
 
-/**
-* 
-* @return
-* The allergenContainsFish
-*/
-public Object getAllergenContainsFish() {
-return allergenContainsFish;
-}
+@SerializedName("nf_serving_weight_grams")
+public int wightGrams;
 
-/**
-* 
-* @param allergenContainsFish
-* The allergen_contains_fish
-*/
-public void setAllergenContainsFish(Object allergenContainsFish) {
-this.allergenContainsFish = allergenContainsFish;
-}
+@SerializedName("allergen_contains_milk")
+public String containsMilk;
 
-/**
-* 
-* @return
-* The allergenContainsShellfish
-*/
-public Object getAllergenContainsShellfish() {
-return allergenContainsShellfish;
-}
+@SerializedName("allergen_contains_eggs")
+public String containsEggs;
 
-/**
-* 
-* @param allergenContainsShellfish
-* The allergen_contains_shellfish
-*/
-public void setAllergenContainsShellfish(Object allergenContainsShellfish) {
-this.allergenContainsShellfish = allergenContainsShellfish;
-}
+@SerializedName("allergen_contains_fish")
+public String containsFish;
 
-/**
-* 
-* @return
-* The allergenContainsTreeNuts
-*/
-public Object getAllergenContainsTreeNuts() {
-return allergenContainsTreeNuts;
-}
+@SerializedName("allergen_contains_shellfish")
+public String containsShellfish;
 
-/**
-* 
-* @param allergenContainsTreeNuts
-* The allergen_contains_tree_nuts
-*/
-public void setAllergenContainsTreeNuts(Object allergenContainsTreeNuts) {
-this.allergenContainsTreeNuts = allergenContainsTreeNuts;
-}
+@SerializedName("allergen_contains_tree_nuts")
+public String containsTreeNuts;
 
-/**
-* 
-* @return
-* The allergenContainsPeanuts
-*/
-public Object getAllergenContainsPeanuts() {
-return allergenContainsPeanuts;
-}
+@SerializedName("allergen_contains_peanuts")
+public String containsPeanuts;
 
-/**
-* 
-* @param allergenContainsPeanuts
-* The allergen_contains_peanuts
-*/
-public void setAllergenContainsPeanuts(Object allergenContainsPeanuts) {
-this.allergenContainsPeanuts = allergenContainsPeanuts;
-}
+@SerializedName("allergen_contains_wheat")
+public String containsWheat;
 
-/**
-* 
-* @return
-* The allergenContainsWheat
-*/
-public Object getAllergenContainsWheat() {
-return allergenContainsWheat;
-}
+@SerializedName("allergen_contains_soybeans")
+public String containsSoybeans;
 
-/**
-* 
-* @param allergenContainsWheat
-* The allergen_contains_wheat
-*/
-public void setAllergenContainsWheat(Object allergenContainsWheat) {
-this.allergenContainsWheat = allergenContainsWheat;
-}
+@SerializedName("allergen_contains_gluten")
+public String containsGluten;
 
-/**
-* 
-* @return
-* The allergenContainsSoybeans
-*/
-public Object getAllergenContainsSoybeans() {
-return allergenContainsSoybeans;
-}
 
-/**
-* 
-* @param allergenContainsSoybeans
-* The allergen_contains_soybeans
-*/
-public void setAllergenContainsSoybeans(Object allergenContainsSoybeans) {
-this.allergenContainsSoybeans = allergenContainsSoybeans;
-}
 
-/**
-* 
-* @return
-* The allergenContainsGluten
-*/
-public Object getAllergenContainsGluten() {
-return allergenContainsGluten;
+public String getOldApiId()
+{
+	return oldApiId;
 }
 
-/**
-* 
-* @param allergenContainsGluten
-* The allergen_contains_gluten
-*/
-public void setAllergenContainsGluten(Object allergenContainsGluten) {
-this.allergenContainsGluten = allergenContainsGluten;
+public String getItemId() 
+{
+	return itemId;
 }
 
 }

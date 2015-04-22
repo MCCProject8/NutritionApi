@@ -1,4 +1,8 @@
-import model.Fields;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+
 import model.Hit;
 import model.NutritionData;
 import model.itemData;
@@ -8,73 +12,43 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 import service.GetSearchFood;
 
-public class Main {
+public class Main extends JFrame {
+	
+	private int WIDTH = 1000;
+	private int HEIGHT = 450;
 
 	public static void main(String[] args) {
 
-		GetSearchFood getSearchFoodAPI;
-
-
-		RestAdapter restAdapter = new RestAdapter.Builder()
-				.setEndpoint(Config.BASE_URL)
-				.setLogLevel(RestAdapter.LogLevel.FULL)
-				.build();
-
-		//Demo Search Food
-		getSearchFoodAPI = restAdapter.create( GetSearchFood.class );
-
-		getSearchFoodAPI.searchFoodItems("turkey", "0:20", Config.appId, Config.appKey, new Callback<NutritionData>() {
-
-			@Override
-			public void success(NutritionData nutritionData, Response response)
-			{
-				printNutritionData( nutritionData);
-				
-			}
-
-			@Override
-			public void failure(RetrofitError retrofitError)
-			{
-
-			}
-		});
 		
-		
-		getSearchFoodAPI.itemResults("513fceb475b8dbbc210008e6", Config.appId, Config.appKey, new Callback<itemData>() {
+		EventQueue.invokeLater(new Runnable() {
+			
+			Main frame;
 			
 			@Override
-			public void success(itemData itemD, Response response)
-			{
-				System.out.print(itemD.getBrandId());
-			}
-
-			@Override
-			public void failure(RetrofitError retrofitError)
-			{
-
+			public void run(){
+					
+				frame = new Main();
+				frame.setVisible(true);	
+				
 			}
 		});
 
 
-	}
-
-	private static void printNutritionData( NutritionData nutritionData )
+	} 
+	
+	public Main()
 	{
-		if ( nutritionData !=null && nutritionData.hits !=null )
-		{
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLayout(null);
+		setSize(WIDTH, HEIGHT);
+		setLocationRelativeTo(null);
+		
+		SearchPanel searchPanel = new SearchPanel();
+		searchPanel.setBounds(0, 0, WIDTH / 3, HEIGHT);
+		
+		add(searchPanel);
 
-			for (Hit h : nutritionData.hits )
-			{
-				System.out.println(" Hit id:" + h.Id + " Hit Type: " + h.Type + " Brand Name: " + h.fields.brandName +
-						" Item Name: " + h.fields.itemName); 
-
-				
-			}
-			
-			
-
-			System.out.println( "Done");
-		}
 	}
 
+	
 }
