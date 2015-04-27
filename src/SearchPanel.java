@@ -25,12 +25,7 @@ public class SearchPanel extends JPanel {
 		
 		GlobalAdapter.adapter.searchForFood();
 		
-		a = new JTextArea();
-		
-		a.setBounds(30,100,400, 300);
-		
 		add(searchField);
-		add(a);
 		
 	}
 

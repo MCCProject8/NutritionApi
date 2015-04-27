@@ -12,7 +12,7 @@ public class ListForItemNames {
 		
 		for(Hit h: nutritionData.hits)
 		{
-			SearchPanel.a.append(h.fields.itemName + "\n");
+
 		}
 	}
 

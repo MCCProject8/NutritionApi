@@ -27,7 +27,7 @@ public class Adapter {
 			@Override
 			public void success(NutritionData nutritionData, Response response)
 			{
-				ListForItemNames.getItemNames(nutritionData);		
+				ListForItemNames.getItemNames(nutritionData);	
 			}
 
 			@Override
