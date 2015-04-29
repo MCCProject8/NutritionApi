@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 
@@ -26,6 +27,8 @@ public class FoodList extends JPanel implements MouseListener
 	private int ServingSizeQty;
 	private String ServingSizeUnit;
 	
+	public static JLabel x;
+	
 	public FoodList(String itemID, String itemName, String brandName, int ServingSizeQty, String ServingSizeUnit)
 	{
 		this.itemID = itemID;
@@ -40,6 +43,11 @@ public class FoodList extends JPanel implements MouseListener
 	{
 		setSize(400,300);
 		setBackground(Color.blue);
+		
+		x = new JLabel("Hello");
+	
+		
+		add(x);
 		
 	}
 	

@@ -26,6 +26,7 @@ public class SearchPanel extends JPanel {
 		foodlistpanel.setBounds(50,100,foodlistpanel.getWidth(),foodlistpanel.getHeight());
 		
 		GlobalAdapter.adapter.searchForFood();
+
 			
 		add(searchField);
 		add(foodlistpanel);
