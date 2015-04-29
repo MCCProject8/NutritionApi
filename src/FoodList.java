@@ -1,5 +1,12 @@
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+
+import model.NutritionData;
 
 //	FoodList.java by Kyle Wolff and Brandon VanderMey on 4/22/2015
 
@@ -12,15 +19,17 @@ import java.awt.event.MouseListener;
 //		"nf_serving_size_qty": 1
 //		"nf_serving_size_unit": "serving"
 
-public class FoodList implements MouseListener
+public class FoodList extends JPanel implements MouseListener
 {
 	private String itemID;
 	private String itemName;
 	private String brandName;
-	private String ServingSizeQty;
+	private int ServingSizeQty;
 	private String ServingSizeUnit;
 	
-	public FoodList(String itemID, String itemName, String brandName, String ServingSizeQty, String ServingSizeUnit)
+	public static JLabel x;
+	
+	public FoodList(String itemID, String itemName, String brandName, int ServingSizeQty, String ServingSizeUnit)
 	{
 		this.itemID = itemID;
 		this.itemName = itemName;
@@ -28,6 +37,20 @@ public class FoodList implements MouseListener
 		this.ServingSizeQty = ServingSizeQty;
 		this.ServingSizeUnit = ServingSizeUnit;
 	}
+	
+	
+	public FoodList()
+	{
+		setSize(400,300);
+		setBackground(Color.blue);
+		
+		x = new JLabel("Hello");
+	
+		
+		add(x);
+		
+	}
+	
 	
 	//	Getters:
 	public String getItemID()
@@ -45,7 +68,7 @@ public class FoodList implements MouseListener
 		return brandName;
 	}
 	
-	public String getServingSizeQty()
+	public int getServingSizeQty()
 	{
 		return ServingSizeQty;
 	}
@@ -71,7 +94,7 @@ public class FoodList implements MouseListener
 		this.brandName = brandName;
 	}
 	
-	public void setServingSizeQty(String ServingSizeQty)
+	public void setServingSizeQty(int ServingSizeQty)
 	{
 		this.ServingSizeQty = ServingSizeQty;
 	}
@@ -80,7 +103,7 @@ public class FoodList implements MouseListener
 	{
 		this.ServingSizeUnit = ServingSizeUnit;
 	}
-
+	
 	//	When the object is clicked
 	@Override
 	public void mouseClicked(MouseEvent arg0)

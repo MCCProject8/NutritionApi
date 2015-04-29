@@ -1,3 +1,6 @@
+import javax.swing.JLabel;
+import javax.swing.JList;
+
 import model.Hit;
 import model.NutritionData;
 import model.itemData;
@@ -27,7 +30,25 @@ public class Adapter {
 			@Override
 			public void success(NutritionData nutritionData, Response response)
 			{
-				ListForItemNames.getItemNames(nutritionData);	
+				for(Hit h : nutritionData.hits)
+				{
+					FoodList foodlist = new FoodList(h.fields.itemId,h.fields.itemName,h.fields.brandName,h.fields.nfServingSizeQty,h.fields.nfServingSizeUnit);
+					
+					
+					if(!foodlist.getBrandName().equals(null))
+					{
+						
+							
+							FoodList.x.setText(foodlist.getBrandName());
+							
+						
+						
+							System.out.println(foodlist.getBrandName());
+					}
+				}
+				
+				
+				
 			}
 
 			@Override

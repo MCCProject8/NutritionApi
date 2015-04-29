@@ -28,8 +28,7 @@ public class Main extends JFrame {
 			public void run(){
 					
 				frame = new Main();
-				frame.setVisible(true);	
-				
+				frame.setVisible(true);			
 			}
 		});
 
@@ -45,7 +44,7 @@ public class Main extends JFrame {
 		
 		SearchPanel searchPanel = new SearchPanel();
 		searchPanel.setBounds(0, 0, WIDTH / 2, HEIGHT);
-		
+				
 		add(searchPanel);
 
 	}
