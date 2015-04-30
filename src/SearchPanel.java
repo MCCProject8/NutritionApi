@@ -1,12 +1,14 @@
 import java.awt.Color;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 
 public class SearchPanel extends JPanel {
 	
-	public JTextField searchField;
+	public static JTextField searchField;
+	public JButton searchButton;
 	
 	public SearchPanel(){
 		
@@ -14,14 +16,15 @@ public class SearchPanel extends JPanel {
 		setLayout(null);
 		
 		searchField = new JTextField();
-		searchField.setBounds(100, 10,300,20);
+		searchField.setBounds(100, 10,280,20);
 		
-		
-		
-		Config.setSearchItem("Chicken");
-		GlobalAdapter.adapter.searchForFood();
-		
+		searchButton = new JButton("Search");
+		searchButton.setBounds(400, 10,80,20);
+		searchButton.addActionListener(new SearchListener());
+
+	
 		add(searchField);
+		add(searchButton);
 
 	}
 

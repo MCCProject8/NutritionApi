@@ -37,6 +37,7 @@ public class Main extends JFrame {
 		setLayout(null);
 		setSize(WIDTH, HEIGHT);
 		setLocationRelativeTo(null);
+		setResizable(false);
 		
 		searchpanel = new SearchPanel();
 		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
@@ -58,7 +59,6 @@ public class Main extends JFrame {
 			offset += 30;
 
 			searchpanel.add(label);			
-			System.out.println(h.fields.itemName + " " + h.fields.itemId);
 		}
 		
 		searchpanel.revalidate();
