@@ -27,6 +27,8 @@ public class Adapter {
 			public void success(NutritionData nutritionData, Response response)
 			{
 				Main.addJlabel(nutritionData);
+				SearchPanel.load.setVisible(false);
+
 			}
 
 			@Override

@@ -58,11 +58,12 @@ public class Main extends JFrame {
 		
 			offset += 30;
 
-			searchpanel.add(label);			
+			searchpanel.add(label);	
 		}
-		
+			
 		searchpanel.revalidate();
 		searchpanel.repaint();
+
 		
 	}	
 }
