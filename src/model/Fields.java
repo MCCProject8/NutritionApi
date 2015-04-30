@@ -22,4 +22,9 @@ public class Fields
         @SerializedName("nf_serving_size_unit")
         public String nfServingSizeUnit;
         
+        public String getbrandName(){
+        	
+        	return brandName;
+        }
+        
 }

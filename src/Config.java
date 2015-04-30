@@ -7,14 +7,14 @@ public class Config
     public static final String appKey = "e77d941048fab5a248b15903bf9fdca4";
     public static final String BASE_URL = "https://api.nutritionix.com/v1_1";
     public static String searchItem = null;
+    public static String itemId = null;
+
     
     public static void setSearchItem(String searchItem){
     	Config.searchItem = searchItem; 	
     }
     
-    
-    public static String getSearchItem(){
-    	
-    	return searchItem;
+    public static void setItemId(String ItemId){
+    	Config.itemId = ItemId;
     }
 }

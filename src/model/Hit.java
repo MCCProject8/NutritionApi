@@ -24,4 +24,5 @@ public class Hit {
     {
     	return Id;
     }
+    
 }
