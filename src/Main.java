@@ -1,38 +1,33 @@
-import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import model.Hit;
 import model.NutritionData;
-import model.itemData;
-import retrofit.Callback;
-import retrofit.RestAdapter;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
-import service.GetSearchFood;
 
 public class Main extends JFrame {
 	
 	private int WIDTH = 1000;
 	private int HEIGHT = 450;
-
+	
+	public static JLabel label;
+	public static SearchPanel searchpanel;
+	
 	public static void main(String[] args) {
 
-		
 		EventQueue.invokeLater(new Runnable() {
 			
 			Main frame;
 			
 			@Override
-			public void run(){
-					
+			public void run()
+			{				
 				frame = new Main();
 				frame.setVisible(true);			
 			}
 		});
-
-
 	} 
 	
 	public Main()
@@ -42,12 +37,31 @@ public class Main extends JFrame {
 		setSize(WIDTH, HEIGHT);
 		setLocationRelativeTo(null);
 		
-		SearchPanel searchPanel = new SearchPanel();
-		searchPanel.setBounds(0, 0, WIDTH / 2, HEIGHT);
-				
-		add(searchPanel);
-
+		searchpanel = new SearchPanel();
+		searchpanel.setBounds(10,10,WIDTH / 2,HEIGHT - 100);
+		
+		add(searchpanel);
 	}
 
-	
+	public static void addJlabel(NutritionData nutritionData) {
+		
+		int offset = 40;
+		
+		for(Hit h : nutritionData.hits)
+		{
+			label = new JLabel();
+			label.setText(h.fields.itemName);
+			label.setBounds(20,offset,400,20);
+			label.addMouseListener(new ItemListener(h.fields.itemId));
+		
+			offset += 30;
+
+			searchpanel.add(label);			
+			System.out.println(h.fields.itemName + " " + h.fields.itemId);
+		}
+		
+		searchpanel.revalidate();
+		searchpanel.repaint();
+		
+	}	
 }

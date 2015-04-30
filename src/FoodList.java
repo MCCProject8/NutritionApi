@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
@@ -19,16 +20,14 @@ import model.NutritionData;
 //		"nf_serving_size_qty": 1
 //		"nf_serving_size_unit": "serving"
 
-public class FoodList extends JPanel implements MouseListener
+public class FoodList extends JList
 {
 	private String itemID;
 	private String itemName;
 	private String brandName;
 	private int ServingSizeQty;
 	private String ServingSizeUnit;
-	
-	public static JLabel x;
-	
+		
 	public FoodList(String itemID, String itemName, String brandName, int ServingSizeQty, String ServingSizeUnit)
 	{
 		this.itemID = itemID;
@@ -41,14 +40,9 @@ public class FoodList extends JPanel implements MouseListener
 	
 	public FoodList()
 	{
-		setSize(400,300);
-		setBackground(Color.blue);
-		
-		x = new JLabel("Hello");
-	
-		
-		add(x);
-		
+		setSize(200,200);
+		setBackground(Color.blue);	
+
 	}
 	
 	
@@ -104,22 +98,5 @@ public class FoodList extends JPanel implements MouseListener
 		this.ServingSizeUnit = ServingSizeUnit;
 	}
 	
-	//	When the object is clicked
-	@Override
-	public void mouseClicked(MouseEvent arg0)
-	{
-		//	I need to call one of your methods to get the variables needed in the ItemList class.
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent arg0) {}
-
-	@Override
-	public void mouseExited(MouseEvent arg0) {}
-
-	@Override
-	public void mousePressed(MouseEvent arg0) {}
-
-	@Override
-	public void mouseReleased(MouseEvent arg0) {}
+	
 }

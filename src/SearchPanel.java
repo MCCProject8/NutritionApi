@@ -1,36 +1,28 @@
 import java.awt.Color;
 
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
 
 
 public class SearchPanel extends JPanel {
 	
 	public JTextField searchField;
-	public static JTextArea a;
-
-	public SearchPanel() {
+	
+	public SearchPanel(){
 		
-		this.setLayout(null);
-		this.setBackground(Color.red);
+		setBorder(Borders.blackline);
+		setLayout(null);
 		
 		searchField = new JTextField();
-		searchField.setBounds(70,50,200,20);
+		searchField.setBounds(100, 10,300,20);
 		
-		searchField.setText("protein");
-		Config.setSearchItem(searchField.getText());
 		
-		FoodList foodlistpanel = new FoodList();
-		foodlistpanel.setBounds(50,100,foodlistpanel.getWidth(),foodlistpanel.getHeight());
 		
+		Config.setSearchItem("Chicken");
 		GlobalAdapter.adapter.searchForFood();
-
-			
-		add(searchField);
-		add(foodlistpanel);
 		
+		add(searchField);
+
 	}
 
 }
