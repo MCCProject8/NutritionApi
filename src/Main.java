@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.EventQueue;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -12,7 +13,7 @@ public class Main extends JFrame {
 	private int WIDTH = 1000;
 	private int HEIGHT = 450;
 	
-	public static JLabel label;
+	public static JButton label;
 	public static SearchPanel searchpanel;
 	
 	public static void main(String[] args) {
@@ -38,7 +39,7 @@ public class Main extends JFrame {
 		setLocationRelativeTo(null);
 		
 		searchpanel = new SearchPanel();
-		searchpanel.setBounds(10,10,WIDTH / 2,HEIGHT - 100);
+		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
 		
 		add(searchpanel);
 	}
@@ -49,9 +50,9 @@ public class Main extends JFrame {
 		
 		for(Hit h : nutritionData.hits)
 		{
-			label = new JLabel();
+			label = new JButton();
 			label.setText(h.fields.itemName);
-			label.setBounds(20,offset,400,20);
+			label.setBounds(40,offset,400,20);
 			label.addMouseListener(new ItemListener(h.fields.itemId));
 		
 			offset += 30;
