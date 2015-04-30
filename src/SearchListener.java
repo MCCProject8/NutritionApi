@@ -12,6 +12,11 @@ public class SearchListener implements ActionListener {
 		
 		SearchPanel.load.setVisible(true);
 		
+		for (int i = 0; i < 10; i++)
+		{
+			Main.label[i].setVisible(false);
+		}
+		
 	}
 
 }
