@@ -13,7 +13,7 @@ public class Main extends JFrame {
 	private int WIDTH = 1000;
 	private int HEIGHT = 450;
 	
-	public static JButton label;
+	public static JButton[] label = new JButton[10];
 	public static SearchPanel searchpanel;
 	
 	public static void main(String[] args) {
@@ -42,23 +42,31 @@ public class Main extends JFrame {
 		searchpanel = new SearchPanel();
 		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
 		
+		for (int i = 0; i < 10; i++)
+		{
+			label[i] = new JButton();
+			label[i].setVisible(false);
+			searchpanel.add(label[i]);
+		}
+		
 		add(searchpanel);
 	}
 
 	public static void addJlabel(NutritionData nutritionData) {
 		
 		int offset = 40;
+		int index = 0;
 		
 		for(Hit h : nutritionData.hits)
 		{
-			label = new JButton();
-			label.setText(h.fields.itemName);
-			label.setBounds(40,offset,400,20);
-			label.addMouseListener(new ItemListener(h.fields.itemId));
+			label[index].setText(h.fields.itemName);
+			label[index].setBounds(40,offset,400,20);
+			label[index].addMouseListener(new ItemListener(h.fields.itemId));
+			label[index].setVisible(true);
 		
 			offset += 30;
-
-			searchpanel.add(label);	
+			
+			index++;
 		}
 			
 		searchpanel.revalidate();
