@@ -24,6 +24,7 @@ public class Main extends JFrame {
 	public static Adapter adapter = new Adapter();
 	public static ItemListener[] itemListener = new ItemListener[10];
 	public static ItemList itemList;
+	public static JFXPanel webpanel;
 	
 	public static void main(String[] args) {
 
@@ -51,18 +52,10 @@ public class Main extends JFrame {
 		searchpanel = new SearchPanel();
 		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
 		
-		JFXPanel webpanel = new JFXPanel();
+		webpanel = new JFXPanel();
 		webpanel.setBounds(610,25,600, HEIGHT - 100);
 		
-		
-		Platform.runLater(new Runnable() { // this will run initFX as JavaFX-Thread
-            @Override
-            public void run() {
-            	WebPanel.initFX(webpanel);
-        		WebPanel.load.setVisible(false);
-            }
-        });
-		
+	
 		for (int i = 0; i < 10; i++)
 		{
 			itemListener[i] = new ItemListener();

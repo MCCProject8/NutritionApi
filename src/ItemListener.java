@@ -1,6 +1,8 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javafx.application.Platform;
+
 
 public class ItemListener implements MouseListener {
 
@@ -26,6 +28,15 @@ public class ItemListener implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		Config.setItemId(ITEMID);
 		Main.adapter.getItem();
+		
+		Platform.runLater(new Runnable() { // this will run initFX as JavaFX-Thread
+            @Override
+            public void run() {
+            	WebPanel.initFX(Main.webpanel);
+        		WebPanel.load.setVisible(false);
+            }
+        });
+		
 	}
 
 	@Override
