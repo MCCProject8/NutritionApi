@@ -69,6 +69,7 @@ public class Main extends JFrame {
 			searchpanel.add(label[i]);
 		}
 		
+		getRootPane().setDefaultButton(SearchPanel.searchButton);
 		add(searchpanel);
 		add(webpanel);
 	}
