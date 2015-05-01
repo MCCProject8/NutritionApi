@@ -59,6 +59,17 @@ public class ItemList
 	private static String servingSizeQty;
 	private static String servingSizeUnit;
 	private static String servingWeightGrams;
+	private static String totalFatPercentDValue;
+	private static String satFatPercentDValue;
+	private static String cholesterolPercentDValue;
+	private static String sodiumPercentDValue;
+	private static String totalCarbPercentDValue;
+	private static String dietaryFiberPercentDValue;
+	private static String proteinPercentDValue;
+	private static String vitaminAPercentDValue;
+	private static String vitaminCPercentDValue;
+	private static String calciumPercentDValue;
+	private static String ironPercentDValue;
 	
 	public ItemList(String itemIDIn, String itemNameIn, String brandIDIn, String brandNameIn, String itemDescIn, String waterGramsIn, String caloriesIn, 
 			String caloriesFromFatIn, String totalFatIn, String saturatedFatIn, String transFattyAcidIn, String polyunsaturatedFatIn, String monounsaturatedFatIn,
@@ -364,4 +375,68 @@ public class ItemList
 	{
 		servingWeightGrams = servingWeightGramsIn;
 	}
+	
+	public static void percentDailyValues(String totalFatIn, String saturatedFatIn, String transFattyAcidIn, String polyunsaturatedFatIn,String monounsaturatedFatIn,
+			String colesterolIn,String sodiumIn, String totalCarbohydrateIn, String dietaryFiberIn, String proteinIn, String vitaminAIn, String vitaminCIn,
+			String calciumIn, String ironIn)
+	{
+		int totalfat = 65;
+		int saturatedFat = 20;
+		int Cholesterol	= 300;
+		int Sodium = 2400;
+		int Potassium = 3500;
+		int TotalCarbohydrate = 300;
+		int DietaryFiber = 25;
+		int Protein	= 50;
+		int VitaminA = 5000;
+		int VitaminC = 60;
+		int Calcium	= 1000;
+		int Iron = 18;
+		int VitaminD = 400;
+		int VitaminE = 30;
+		int VitaminK = 80;
+		float Thiamin = 1.5f;
+		float Riboflavin = 1.7f;
+		int Niacin = 20;
+		int VitaminB6 = 2;
+		int Folate = 400;
+		int VitaminB12 =6;
+		int Biotin = 300;
+		int Pantothenic_acid = 10;
+		int Phosphorus	= 1000;
+		int Iodine = 150;
+		int Magnesium = 400;
+		int Zinc = 15;
+		int Selenium = 70;
+		int Copper = 2;
+		int Manganese = 2;
+		int Chromium = 120;
+		int Molybdenum = 75;
+		int Chloride = 3400;
+		
+		totalFatPercentDValue = String.valueOf(Integer.valueOf(totalFatIn) / totalfat);
+		satFatPercentDValue = String.valueOf(Integer.valueOf(saturatedFatIn) / saturatedFat);
+		cholesterolPercentDValue = String.valueOf(Integer.valueOf(colesterolIn) / Cholesterol);
+		sodiumPercentDValue = String.valueOf(Integer.valueOf(sodiumIn) / Sodium);
+		totalCarbPercentDValue = String.valueOf(Integer.valueOf(totalCarbohydrateIn) / TotalCarbohydrate);
+		dietaryFiberPercentDValue = String.valueOf(Integer.valueOf(dietaryFiberIn) / DietaryFiber);
+		proteinPercentDValue = String.valueOf(Integer.valueOf(proteinIn) / Protein);
+		vitaminAPercentDValue = String.valueOf(Integer.valueOf(vitaminAIn) / VitaminA);
+		vitaminCPercentDValue = String.valueOf(Integer.valueOf(vitaminCIn) / VitaminC);
+		calciumPercentDValue = String.valueOf(Integer.valueOf(calciumIn) / Calcium);
+		ironPercentDValue = String.valueOf(Integer.valueOf(ironIn) / Iron);
+
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
