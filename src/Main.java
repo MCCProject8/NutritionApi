@@ -59,6 +59,7 @@ public class Main extends JFrame {
             @Override
             public void run() {
             	WebPanel.initFX(webpanel);
+        		WebPanel.load.setVisible(false);
             }
         });
 		

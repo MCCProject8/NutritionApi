@@ -1,3 +1,6 @@
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -7,9 +10,16 @@ import javafx.scene.web.WebView;
 
 
 public class WebPanel 
-{
+{	
+	public static JLabel load;
+	
 	public static void initFX(final JFXPanel fxPanel)
-	{
+	{	
+		ImageIcon loading2 = new ImageIcon("ajax-loader.gif");
+		load = new JLabel("loading... ", loading2, JLabel.CENTER);
+		load.setBounds(250,120,100,40);
+		fxPanel.add(load);
+		
 		CreateNutritionLabel htmldoc = new CreateNutritionLabel();
 		htmldoc.startHtmlDocument();
 		htmldoc.addTitle("Pizza");
@@ -26,7 +36,7 @@ public class WebPanel
 		Group group = new Group();
         Scene scene = new Scene(group);
         fxPanel.setScene(scene);
-
+        
         WebView webView = new WebView();
 
         group.getChildren().add(webView);
@@ -36,7 +46,6 @@ public class WebPanel
 		
 		String x = String.valueOf(htmldoc.getHtml());
 		
-		webEngine.loadContent(x);
-		
+		webEngine.loadContent(x);	
 	}
 }
