@@ -95,12 +95,12 @@ public class CreateNutritionLabel
 	
 	public void addLine(String label, String weight, String percent)
 	{
-		html.append("<div class=\"line\"><div class=\"dv\"><b>" + percent + "</b>%</div><b>" + label + "</b>" + weight + "</div>");
+		html.append("<div class=\"line\"><div class=\"dv\"><b>" + percent + "</b>%</div><b>" + label + "</b> " + weight + "</div>");
 	}
 	
 	public void addLine(String label, String weight)
 	{
-		html.append("<div class=\"line\"><b>" + label + "</b>" + weight + "</div>");
+		html.append("<div class=\"line\"><b>" + label + "</b> " + weight + "</div>");
 	}
 	
 	public void addIndentedLine(String label, String weight, String percent)
