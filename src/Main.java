@@ -24,6 +24,7 @@ public class Main extends JFrame {
 	public static SearchPanel searchpanel;
 	public static Adapter adapter = new Adapter();
 	public static ItemListener[] itemListener = new ItemListener[10];
+	public static ItemList itemList;
 	
 	public static void main(String[] args) {
 
