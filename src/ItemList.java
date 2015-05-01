@@ -1,34 +1,7 @@
 //	ItemList.java by Kyle Wolff and Brandon VanderMey on 4/22/2015
 
-//	Request Example: https://api.nutritionix.com/v1_1/item?id=513fceb475b8dbbc210008e6&appId=781dbb8d&appKey=e77d941048fab5a248b15903bf9fdca4
-//	Items from Response:
-//		item_id": "513fceb475b8dbbc210008e6"
-//		"item_name": "Turkey - 0.5 breast, bone removed"
-//		brand_id": "513fcc648110a4cafb90ca5e"
-//		"brand_name": "USDA"
-//		"item_description": null
-//		"nf_water_grams": 546.22
-//		"nf_calories": 1632.96
-//		"nf_calories_from_fat": 576.2
-//		"nf_total_fat": 64.02
-//		"nf_saturated_fat": 18.14
-//		"nf_trans_fatty_acid": null
-//		"nf_polyunsaturated_fat": 15.55
-//		"nf_monounsaturated_fat": 21.17
-//		"nf_cholesterol": 639.36
-//		"nf_sodium": 544.32
-//		"nf_total_carbohydrate": 0
-//		"nf_dietary_fiber": 0
-//		"nf_sugars": null
-//		"nf_protein": 248.05,
-//		"nf_vitamin_a_dv": 0
-//		"nf_vitamin_c_dv": 0
-//		"nf_calcium_dv": 18
-//		"nf_iron_dv": 67
-//		"nf_servings_per_container": null
-//		"nf_serving_size_qty": 0.5
-//		"nf_serving_size_unit": "breast, bone removed"
-//		"nf_serving_weight_grams": 864
+// API -  https://api.nutritionix.com/v1_1/item?id=513fceb475b8dbbc210008e6&appId=781dbb8d&appKey=e77d941048fab5a248b15903bf9fdca4
+
 
 public class ItemList
 {
@@ -104,6 +77,7 @@ public class ItemList
 		servingSizeQty = servingSizeQtyIn;
 		servingSizeUnit = servingSizeUnitIn;
 		servingWeightGrams = servingWeightGramsIn;
+		
 	}
 
 	public static String getItemID()
@@ -376,6 +350,100 @@ public class ItemList
 		servingWeightGrams = servingWeightGramsIn;
 	}
 	
+	public static String getSatFatPercentDValue() {
+		return satFatPercentDValue;
+	}
+
+	public static void setSatFatPercentDValue(String satFatPercentDValue) {
+		ItemList.satFatPercentDValue = satFatPercentDValue;
+	}
+
+	public static String getTotalFatPercentDValue() {
+		return totalFatPercentDValue;
+	}
+
+	public static void setTotalFatPercentDValue(String totalFatPercentDValue) {
+		ItemList.totalFatPercentDValue = totalFatPercentDValue;
+	}
+
+	public static String getCholesterolPercentDValue() {
+		return cholesterolPercentDValue;
+	}
+
+	public static void setCholesterolPercentDValue(
+			String cholesterolPercentDValue) {
+		ItemList.cholesterolPercentDValue = cholesterolPercentDValue;
+	}
+
+	public static String getSodiumPercentDValue() {
+		return sodiumPercentDValue;
+	}
+
+	public static void setSodiumPercentDValue(String sodiumPercentDValue) {
+		ItemList.sodiumPercentDValue = sodiumPercentDValue;
+	}
+
+	public static String getTotalCarbPercentDValue() {
+		return totalCarbPercentDValue;
+	}
+
+	public static void setTotalCarbPercentDValue(String totalCarbPercentDValue) {
+		ItemList.totalCarbPercentDValue = totalCarbPercentDValue;
+	}
+
+	public static String getDietaryFiberPercentDValue() {
+		return dietaryFiberPercentDValue;
+	}
+
+	public static void setDietaryFiberPercentDValue(
+			String dietaryFiberPercentDValue) {
+		ItemList.dietaryFiberPercentDValue = dietaryFiberPercentDValue;
+	}
+
+	public static String getProteinPercentDValue() {
+		return proteinPercentDValue;
+	}
+
+	public static void setProteinPercentDValue(String proteinPercentDValue) {
+		ItemList.proteinPercentDValue = proteinPercentDValue;
+	}
+
+	public static String getVitaminAPercentDValue() {
+		return vitaminAPercentDValue;
+	}
+
+	public static void setVitaminAPercentDValue(String vitaminAPercentDValue) {
+		ItemList.vitaminAPercentDValue = vitaminAPercentDValue;
+	}
+
+	public static String getVitaminCPercentDValue() {
+		return vitaminCPercentDValue;
+	}
+
+	public static void setVitaminCPercentDValue(String vitaminCPercentDValue) {
+		ItemList.vitaminCPercentDValue = vitaminCPercentDValue;
+	}
+
+	public static String getCalciumPercentDValue() {
+		return calciumPercentDValue;
+	}
+
+	public static void setCalciumPercentDValue(String calciumPercentDValue) {
+		ItemList.calciumPercentDValue = calciumPercentDValue;
+	}
+
+	public static String getIronPercentDValue() {
+		return ironPercentDValue;
+	}
+
+	public static void setIronPercentDValue(String ironPercentDValue) {
+		ItemList.ironPercentDValue = ironPercentDValue;
+	}
+	
+	
+	
+	
+	
 	public static void percentDailyValues(String totalFatIn, String saturatedFatIn, String transFattyAcidIn, String polyunsaturatedFatIn,String monounsaturatedFatIn,
 			String colesterolIn,String sodiumIn, String totalCarbohydrateIn, String dietaryFiberIn, String proteinIn, String vitaminAIn, String vitaminCIn,
 			String calciumIn, String ironIn)
@@ -384,7 +452,7 @@ public class ItemList
 		int saturatedFat = 20;
 		int Cholesterol	= 300;
 		int Sodium = 2400;
-		int Potassium = 3500;
+		//int Potassium = 3500;
 		int TotalCarbohydrate = 300;
 		int DietaryFiber = 25;
 		int Protein	= 50;
@@ -392,7 +460,7 @@ public class ItemList
 		int VitaminC = 60;
 		int Calcium	= 1000;
 		int Iron = 18;
-		int VitaminD = 400;
+		/*int VitaminD = 400;
 		int VitaminE = 30;
 		int VitaminK = 80;
 		float Thiamin = 1.5f;
@@ -412,20 +480,19 @@ public class ItemList
 		int Manganese = 2;
 		int Chromium = 120;
 		int Molybdenum = 75;
-		int Chloride = 3400;
+		int Chloride = 3400;*/// Possibly use these in later releases
 		
-		totalFatPercentDValue = String.valueOf(Integer.valueOf(totalFatIn) / totalfat);
-		satFatPercentDValue = String.valueOf(Integer.valueOf(saturatedFatIn) / saturatedFat);
-		cholesterolPercentDValue = String.valueOf(Integer.valueOf(colesterolIn) / Cholesterol);
-		sodiumPercentDValue = String.valueOf(Integer.valueOf(sodiumIn) / Sodium);
-		totalCarbPercentDValue = String.valueOf(Integer.valueOf(totalCarbohydrateIn) / TotalCarbohydrate);
-		dietaryFiberPercentDValue = String.valueOf(Integer.valueOf(dietaryFiberIn) / DietaryFiber);
-		proteinPercentDValue = String.valueOf(Integer.valueOf(proteinIn) / Protein);
-		vitaminAPercentDValue = String.valueOf(Integer.valueOf(vitaminAIn) / VitaminA);
-		vitaminCPercentDValue = String.valueOf(Integer.valueOf(vitaminCIn) / VitaminC);
-		calciumPercentDValue = String.valueOf(Integer.valueOf(calciumIn) / Calcium);
-		ironPercentDValue = String.valueOf(Integer.valueOf(ironIn) / Iron);
-
+		setTotalFatPercentDValue(String.valueOf(Integer.valueOf(totalFatIn) / totalfat));
+		setSatFatPercentDValue(String.valueOf(Integer.valueOf(saturatedFatIn) / saturatedFat));
+		setCholesterolPercentDValue(String.valueOf(Integer.valueOf(colesterolIn) / Cholesterol));
+		setSodiumPercentDValue(String.valueOf(Integer.valueOf(sodiumIn) / Sodium));
+		setTotalCarbPercentDValue(String.valueOf(Integer.valueOf(totalCarbohydrateIn) / TotalCarbohydrate));
+		setDietaryFiberPercentDValue(String.valueOf(Integer.valueOf(dietaryFiberIn) / DietaryFiber));
+		setProteinPercentDValue(String.valueOf(Integer.valueOf(proteinIn) / Protein));
+		setVitaminAPercentDValue(String.valueOf(Integer.valueOf(vitaminAIn) / VitaminA));
+		setVitaminCPercentDValue(String.valueOf(Integer.valueOf(vitaminCIn) / VitaminC));
+		setCalciumPercentDValue(String.valueOf(Integer.valueOf(calciumIn) / Calcium));
+		setIronPercentDValue(String.valueOf(Integer.valueOf(ironIn) / Iron));
 	}
 }
 

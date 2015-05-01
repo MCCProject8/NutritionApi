@@ -1,5 +1,3 @@
-import java.awt.Color;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -7,7 +5,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import designComponents.Borders;
-
 
 public class SearchPanel extends JPanel {
 	
@@ -32,11 +29,8 @@ public class SearchPanel extends JPanel {
 	    load.setBounds(200,100,100,40);
 		SearchPanel.load.setVisible(false);
 
-
 	    add(load);
 		add(searchField);
 		add(searchButton);
-
 	}
-
 }

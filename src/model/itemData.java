@@ -92,7 +92,7 @@ public int servingQty;
 public String servingSizeunit;
 
 @SerializedName("nf_serving_weight_grams")
-public int wightGrams;
+public int weightGrams;
 
 @SerializedName("allergen_contains_milk")
 public String containsMilk;
@@ -120,7 +120,5 @@ public String containsSoybeans;
 
 @SerializedName("allergen_contains_gluten")
 public String containsGluten;
-
-
 
 }
