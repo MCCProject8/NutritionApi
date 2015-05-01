@@ -1,16 +1,11 @@
 import java.awt.Color;
 import java.awt.EventQueue;
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
 
 import javax.swing.JButton;
-import javax.swing.JEditorPane;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextPane;
+
 
 import model.Hit;
 import model.NutritionData;
@@ -35,21 +30,13 @@ public class Main extends JFrame {
 			@Override
 			public void run()
 			{				
-				try {
-					frame = new Main();
-				} catch (MalformedURLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				frame = new Main();
 				frame.setVisible(true);			
 			}
 		});
 	} 
 	
-	public Main() throws MalformedURLException, IOException
+	public Main() 
 	{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(null);
@@ -92,7 +79,5 @@ public class Main extends JFrame {
 			
 		searchpanel.revalidate();
 		searchpanel.repaint();
-
-		
 	}	
 }

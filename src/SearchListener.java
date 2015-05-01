@@ -15,8 +15,6 @@ public class SearchListener implements ActionListener {
 		for (int i = 0; i < 10; i++)
 		{
 			Main.label[i].setVisible(false);
-		}
-		
+		}		
 	}
-
 }
