@@ -30,7 +30,6 @@ public class ItemListener implements MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		Config.setItemId(ITEMID);
-		Main.adapter.getItem();
 		
 			for(int i = 0; i < 10; i++)
 			{
