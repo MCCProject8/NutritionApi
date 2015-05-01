@@ -56,12 +56,6 @@ public class Main extends JFrame {
 		setLocationRelativeTo(null);
 		setResizable(false);
 		
-		 JTextPane editorpane= new JTextPane();
-		 URL page = new URL("nutritionLabel.html");
-		 editorpane.setPage(page);
-	     
-		 editorpane.setBounds(640,25,500,HEIGHT - 100);
-		
 		searchpanel = new SearchPanel();
 		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
 		
@@ -77,7 +71,6 @@ public class Main extends JFrame {
 		}
 		
 		add(searchpanel);
-		add(editorpane);
 	}
 
 	public static void addJlabel(NutritionData nutritionData) {
