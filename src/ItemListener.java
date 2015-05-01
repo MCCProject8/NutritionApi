@@ -29,6 +29,15 @@ public class ItemListener implements MouseListener {
 		Config.setItemId(ITEMID);
 		Main.adapter.getItem();
 		
+			for(int i = 0; i < 10; i++)
+			{
+				if(e.getSource() == Main.label[i])
+				{
+					Main.label[i].setFocusPainted(false);
+					Main.label[i].setFocusable(false);
+				}
+			}
+			
 		Platform.runLater(new Runnable() { // this will run initFX as JavaFX-Thread
             @Override
             public void run() {
