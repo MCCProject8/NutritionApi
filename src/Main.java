@@ -1,16 +1,23 @@
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.swing.JButton;
+import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
 
 import model.Hit;
 import model.NutritionData;
 
 public class Main extends JFrame {
 	
-	private int WIDTH = 1000;
+	private int WIDTH = 1200;
 	private int HEIGHT = 450;
 	
 	public static JButton[] label = new JButton[10];
@@ -27,19 +34,33 @@ public class Main extends JFrame {
 			@Override
 			public void run()
 			{				
-				frame = new Main();
+				try {
+					frame = new Main();
+				} catch (MalformedURLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				frame.setVisible(true);			
 			}
 		});
 	} 
 	
-	public Main()
+	public Main() throws MalformedURLException, IOException
 	{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(null);
 		setSize(WIDTH, HEIGHT);
 		setLocationRelativeTo(null);
 		setResizable(false);
+		
+		 JTextPane editorpane= new JTextPane();
+		 URL page = new URL("nutritionLabel.html");
+		 editorpane.setPage(page);
+	     
+		 editorpane.setBounds(640,25,500,HEIGHT - 100);
 		
 		searchpanel = new SearchPanel();
 		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
@@ -56,6 +77,7 @@ public class Main extends JFrame {
 		}
 		
 		add(searchpanel);
+		add(editorpane);
 	}
 
 	public static void addJlabel(NutritionData nutritionData) {
@@ -65,11 +87,10 @@ public class Main extends JFrame {
 				
 		for(Hit h : nutritionData.hits)
 		{
-			label[index].setText(h.fields.itemName);
+			label[index].setText("Brand Name: " + h.fields.brandName + "     Item Name: " + h.fields.itemName);
 			label[index].setBounds(40,offset,400,20);
 			label[index].setVisible(true);
 			itemListener[index].setItemId(h.fields.itemId);
-		
 			offset += 30;
 			
 			index++;

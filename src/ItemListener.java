@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -28,11 +29,27 @@ public class ItemListener implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		Config.setItemId(ITEMID);
 		Main.adapter.getItem();
-		System.out.println(ITEMID);
+		
+		for(int i = 0; i < 10; i++)
+		{
+			if(e.getSource() == Main.label[i])
+			{
+				Main.label[i].setBackground(Color.decode("#5CADFF"));
+			}
+		}
+
 	}
 
 	@Override
-	public void mouseReleased(MouseEvent arg0) {}
+	public void mouseReleased(MouseEvent e) {
+		for(int i = 0; i < 10; i++)
+		{
+			if(e.getSource() == Main.label[i])
+			{
+
+			}
+		}
+	}
 	
 	public void setItemId(String itemid){
 		ITEMID = itemid;

@@ -123,14 +123,4 @@ public String containsGluten;
 
 
 
-public String getOldApiId()
-{
-	return oldApiId;
-}
-
-public String getItemId() 
-{
-	return itemId;
-}
-
 }
