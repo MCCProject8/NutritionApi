@@ -16,6 +16,7 @@ public class Main extends JFrame {
 	public static JButton[] label = new JButton[10];
 	public static SearchPanel searchpanel;
 	public static Adapter adapter = new Adapter();
+	public static ItemListener[] itemListener = new ItemListener[10];
 	
 	public static void main(String[] args) {
 
@@ -45,8 +46,12 @@ public class Main extends JFrame {
 		
 		for (int i = 0; i < 10; i++)
 		{
+			itemListener[i] = new ItemListener();
+			
 			label[i] = new JButton();
 			label[i].setVisible(false);
+			label[i].addMouseListener(itemListener[i]);
+	
 			searchpanel.add(label[i]);
 		}
 		
@@ -57,13 +62,13 @@ public class Main extends JFrame {
 		
 		int offset = 40;
 		int index = 0;
-		
+				
 		for(Hit h : nutritionData.hits)
 		{
 			label[index].setText(h.fields.itemName);
 			label[index].setBounds(40,offset,400,20);
-			label[index].addMouseListener(new ItemListener(h.fields.itemId));
 			label[index].setVisible(true);
+			itemListener[index].setItemId(h.fields.itemId);
 		
 			offset += 30;
 			

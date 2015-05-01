@@ -11,6 +11,10 @@ public class ItemListener implements MouseListener {
 		ITEMID = itemId;
 	}
 
+	public ItemListener() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void mouseClicked(MouseEvent arg0) {}
 
@@ -29,5 +33,9 @@ public class ItemListener implements MouseListener {
 
 	@Override
 	public void mouseReleased(MouseEvent arg0) {}
+	
+	public void setItemId(String itemid){
+		ITEMID = itemid;
+	}
 
 }
