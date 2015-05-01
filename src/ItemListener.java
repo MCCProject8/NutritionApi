@@ -1,6 +1,9 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import javafx.application.Platform;
 
 
@@ -37,12 +40,14 @@ public class ItemListener implements MouseListener {
 					Main.label[i].setFocusable(false);
 				}
 			}
+		
+			Main.load.setVisible(true);
 			
 		Platform.runLater(new Runnable() { // this will run initFX as JavaFX-Thread
             @Override
             public void run() {
             	WebPanel.initFX(Main.webpanel);
-        		WebPanel.load.setVisible(false);
+    			Main.load.setVisible(false);
             }
         });
 		

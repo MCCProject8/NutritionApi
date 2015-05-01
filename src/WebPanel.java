@@ -1,3 +1,6 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -8,16 +11,11 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class WebPanel 
-{	
-	public static JLabel load;
-	
+{		
 	public static void initFX(final JFXPanel fxPanel)
 	{	
-		ImageIcon loading2 = new ImageIcon("ajax-loader.gif");
-		load = new JLabel("loading... ", loading2, JLabel.CENTER);
-		load.setBounds(250,120,100,40);
-		fxPanel.add(load);
 		
+		fxPanel.setVisible(true);
 		CreateNutritionLabel htmldoc = new CreateNutritionLabel();
 		htmldoc.startHtmlDocument();
 		htmldoc.addTitle("Pizza");
@@ -49,8 +47,7 @@ public class WebPanel
 		WebEngine webEngine = webView.getEngine();
 		
 		String x = String.valueOf(htmldoc.getHtml());
-		
+						
 		webEngine.loadContent(x);
-		
 	}
 }

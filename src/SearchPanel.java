@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 
 import designComponents.Borders;
 
+@SuppressWarnings("serial")
 public class SearchPanel extends JPanel {
 	
 	public static JTextField searchField;

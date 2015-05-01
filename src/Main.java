@@ -1,19 +1,21 @@
 import java.awt.Color;
 import java.awt.EventQueue;
-import java.io.IOException;
-import java.net.MalformedURLException;
 
-import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
 
 
+
+import javax.swing.JLabel;
+
 import model.Hit;
 import model.NutritionData;
 
+@SuppressWarnings("serial")
 public class Main extends JFrame {
 	
 	private int WIDTH = 980;
@@ -25,6 +27,8 @@ public class Main extends JFrame {
 	public static ItemListener[] itemListener = new ItemListener[10];
 	public static ItemList itemList;
 	public static JFXPanel webpanel;
+	public static JLabel load;
+
 	
 	public static void main(String[] args) {
 
@@ -56,6 +60,12 @@ public class Main extends JFrame {
 		
 		webpanel = new JFXPanel();
 		webpanel.setBounds(610,25,330, HEIGHT - 100);
+		
+		ImageIcon loading2 = new ImageIcon("ajax-loader.gif");
+		load = new JLabel("loading... ", loading2, JLabel.CENTER);
+		load.setBounds(100,100,100,40);
+		load.setVisible(false);
+		webpanel.add(load);
 		
 	
 		for (int i = 0; i < 10; i++)
