@@ -83,10 +83,10 @@ public int iron;
 public int refuse;
 
 @SerializedName("nf_servings_per_container")
-public int servingPerContainer;
+public float servingPerContainer;
 
 @SerializedName("nf_serving_size_qty")
-public int servingQty;
+public float servingQty;
 
 @SerializedName("nf_serving_size_unit")
 public String servingSizeunit;

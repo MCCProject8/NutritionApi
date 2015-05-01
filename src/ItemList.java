@@ -452,7 +452,6 @@ public class ItemList
 		int saturatedFat = 20;
 		int Cholesterol	= 300;
 		int Sodium = 2400;
-		//int Potassium = 3500;
 		int TotalCarbohydrate = 300;
 		int DietaryFiber = 25;
 		int Protein	= 50;
@@ -460,27 +459,6 @@ public class ItemList
 		int VitaminC = 60;
 		int Calcium	= 1000;
 		int Iron = 18;
-		/*int VitaminD = 400;
-		int VitaminE = 30;
-		int VitaminK = 80;
-		float Thiamin = 1.5f;
-		float Riboflavin = 1.7f;
-		int Niacin = 20;
-		int VitaminB6 = 2;
-		int Folate = 400;
-		int VitaminB12 =6;
-		int Biotin = 300;
-		int Pantothenic_acid = 10;
-		int Phosphorus	= 1000;
-		int Iodine = 150;
-		int Magnesium = 400;
-		int Zinc = 15;
-		int Selenium = 70;
-		int Copper = 2;
-		int Manganese = 2;
-		int Chromium = 120;
-		int Molybdenum = 75;
-		int Chloride = 3400;*/// Possibly use these in later releases
 		
 		setTotalFatPercentDValue(String.valueOf(Integer.valueOf(totalFatIn) / totalfat));
 		setSatFatPercentDValue(String.valueOf(Integer.valueOf(saturatedFatIn) / saturatedFat));
