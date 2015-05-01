@@ -322,46 +322,46 @@ public class ItemList
 
 	public static void setProtein(String proteinIn)
 	{
-		protein = protein;
+		protein = proteinIn;
 	}
 
-	public static void setVitaminA(String vitaminA)
+	public static void setVitaminA(String vitaminAIn)
 	{
-		vitaminA = vitaminA;
+		vitaminA = vitaminAIn;
 	}
 
-	public static void setVitaminC(String vitaminC)
+	public static void setVitaminC(String vitaminCIn)
 	{
-		vitaminC = vitaminC;
+		vitaminC = vitaminCIn;
 	}
 
-	public static void setCalcium(String calcium)
+	public static void setCalcium(String calciumIn)
 	{
-		calcium = calcium;
+		calcium = calciumIn;
 	}
 
-	public static void setIron(String iron)
+	public static void setIron(String ironIn)
 	{
-		iron = iron;
+		iron = ironIn;
 	}
 
-	public static void setServingsPerContainer(String servingsPerContainer)
+	public static void setServingsPerContainer(String servingsPerContainerIn)
 	{
-		servingsPerContainer = servingsPerContainer;
+		servingsPerContainer = servingsPerContainerIn;
 	}
 
-	public static void setServingSizeQty(String servingSizeQty)
+	public static void setServingSizeQty(String servingSizeQtyIn)
 	{
-		servingSizeQty = servingSizeQty;
+		servingSizeQty = servingSizeQtyIn;
 	}
 
-	public static void setServingSizeUnit(String servingSizeUnit)
+	public static void setServingSizeUnit(String servingSizeUnitIn)
 	{
-		servingSizeUnit = servingSizeUnit;
+		servingSizeUnit = servingSizeUnitIn;
 	}
 
-	public static void setServingWeightGrams(String servingWeightGrams)
+	public static void setServingWeightGrams(String servingWeightGramsIn)
 	{
-		servingWeightGrams = servingWeightGrams;
+		servingWeightGrams = servingWeightGramsIn;
 	}
 }
