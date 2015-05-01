@@ -26,9 +26,15 @@ public class WebPanel
 		htmldoc.addAmountPerServing();
 		htmldoc.addMediumBar();
 		htmldoc.addDailyValueLabel();
-		htmldoc.addLine("Total Fat", "90g");
+		htmldoc.addLine("Total Fat ", "90g");
 		htmldoc.addLine("Bananas", "90g", "30");
 		htmldoc.addIndentedLine("Trans Fat", "7g", "5");
+		
+		for(int i = 0; i < 20; i++)
+		{
+			htmldoc.addLine("Brandon VanderMey", "400");
+		}
+		
 		htmldoc.endHtmlDocument();
 		
 		Group group = new Group();
@@ -38,8 +44,8 @@ public class WebPanel
         WebView webView = new WebView();
 
         group.getChildren().add(webView);
-        webView.setMinSize(300, 300);
-        webView.setMaxSize(500, 500);
+        webView.setMinSize(330, 350);
+        webView.setMaxSize(330, 350);
 		WebEngine webEngine = webView.getEngine();
 		
 		String x = String.valueOf(htmldoc.getHtml());

@@ -16,7 +16,7 @@ import model.NutritionData;
 
 public class Main extends JFrame {
 	
-	private int WIDTH = 1200;
+	private int WIDTH = 980;
 	private int HEIGHT = 450;
 	
 	public static JButton[] label = new JButton[10];
@@ -48,12 +48,14 @@ public class Main extends JFrame {
 		setSize(WIDTH, HEIGHT);
 		setLocationRelativeTo(null);
 		setResizable(false);
+		getContentPane().setBackground(Color.YELLOW);
+		setTitle("Nutritionix");
 		
 		searchpanel = new SearchPanel();
-		searchpanel.setBounds(10,25,WIDTH / 2,HEIGHT - 100);
+		searchpanel.setBounds(10,25,500,HEIGHT - 100);
 		
 		webpanel = new JFXPanel();
-		webpanel.setBounds(610,25,600, HEIGHT - 100);
+		webpanel.setBounds(610,25,330, HEIGHT - 100);
 		
 	
 		for (int i = 0; i < 10; i++)

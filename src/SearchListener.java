@@ -16,5 +16,11 @@ public class SearchListener implements ActionListener {
 		{
 			Main.label[i].setVisible(false);
 		}		
+		
+		if(e.getSource() == SearchPanel.searchButton)
+		{
+			SearchPanel.searchButton.setFocusPainted(false);
+			SearchPanel.searchButton.setFocusable(false);
+		}
 	}
 }

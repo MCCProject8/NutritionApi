@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -9,12 +11,13 @@ import designComponents.Borders;
 public class SearchPanel extends JPanel {
 	
 	public static JTextField searchField;
-	public JButton searchButton;
+	public static JButton searchButton;
 	public static JLabel load;
 	
 	public SearchPanel(){
 		
 		setBorder(Borders.blackline);
+		setBackground(Color.blue);
 		setLayout(null);
 		
 		searchField = new JTextField();
