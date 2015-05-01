@@ -23,8 +23,8 @@ public class ItemListener implements MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		Config.setItemId(ITEMID);
-		GlobalAdapter.adapter.getItem();
-		
+		Main.adapter.getItem();
+		System.out.println(ITEMID);
 	}
 
 	@Override

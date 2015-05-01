@@ -15,6 +15,7 @@ public class Main extends JFrame {
 	
 	public static JButton[] label = new JButton[10];
 	public static SearchPanel searchpanel;
+	public static Adapter adapter = new Adapter();
 	
 	public static void main(String[] args) {
 

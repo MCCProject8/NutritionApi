@@ -6,6 +6,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import designComponents.Borders;
+
 
 public class SearchPanel extends JPanel {
 	

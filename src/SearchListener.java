@@ -8,7 +8,7 @@ public class SearchListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		Config.setSearchItem(SearchPanel.searchField.getText());
-		GlobalAdapter.adapter.searchForFood();
+		Main.adapter.searchForFood();
 		
 		SearchPanel.load.setVisible(true);
 		
