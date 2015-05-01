@@ -7,8 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
-
-
 public class WebPanel 
 {	
 	public static JLabel load;
@@ -27,9 +25,9 @@ public class WebPanel
 		htmldoc.addLargeBar();
 		htmldoc.addAmountPerServing();
 		htmldoc.addMediumBar();
+		htmldoc.addDailyValueLabel();
 		htmldoc.addLine("Total Fat", "90g");
 		htmldoc.addLine("Bananas", "90g", "30");
-		htmldoc.addIndentedLine("Sat", "4g");
 		htmldoc.addIndentedLine("Trans Fat", "7g", "5");
 		htmldoc.endHtmlDocument();
 		
@@ -46,6 +44,7 @@ public class WebPanel
 		
 		String x = String.valueOf(htmldoc.getHtml());
 		
-		webEngine.loadContent(x);	
+		webEngine.loadContent(x);
+		
 	}
 }
