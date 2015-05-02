@@ -29,6 +29,7 @@ public class ItemListener implements MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		Config.setItemId(ITEMID);
+		Main.adapter.getItem();
 		
 			for(int i = 0; i < 10; i++)
 			{
@@ -40,9 +41,7 @@ public class ItemListener implements MouseListener {
 			}
 		
 			Main.load.setVisible(true);
-    		Main.adapter.getItem();
 
-			
 		Platform.runLater(new Runnable() { // this will run initFX as JavaFX-Thread
             @Override
             public void run() {

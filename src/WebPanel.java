@@ -22,8 +22,6 @@ public class WebPanel
         webView.setMaxSize(330, 350);
 		WebEngine webEngine = webView.getEngine();
 		
-		
-		
 		CreateNutritionLabel htmldoc = new CreateNutritionLabel();
 		htmldoc.startHtmlDocument();
 		htmldoc.addTitle(ItemList.getItemName());
