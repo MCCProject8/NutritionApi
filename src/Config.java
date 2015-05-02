@@ -3,8 +3,8 @@
  */
 public class Config
 {
-    public static final String appId = "770c722a";
-    public static final String appKey = "2c4fb428e7e2fbb438f50666888fd0eb";
+    public static final String appId = "e07891b3";
+    public static final String appKey = "3110965832cc6ca7266dc702e1d67e03";
     public static final String BASE_URL = "https://api.nutritionix.com/v1_1";
     public static String searchItem = null;
     public static String itemId = null;

@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 //	ItemList.java by Kyle Wolff and Brandon VanderMey on 4/22/2015
 
 // API -  https://api.nutritionix.com/v1_1/item?id=513fceb475b8dbbc210008e6&appId=781dbb8d&appKey=e77d941048fab5a248b15903bf9fdca4
@@ -77,6 +79,8 @@ public class ItemList
 		servingSizeQty = servingSizeQtyIn;
 		servingSizeUnit = servingSizeUnitIn;
 		servingWeightGrams = servingWeightGramsIn;
+		
+		percentDailyValues(totalFatIn, saturatedFatIn, transFattyAcidIn, polyunsaturatedFatIn, monounsaturatedFatIn, colesterolIn, sodiumIn, totalCarbohydrateIn, dietaryFiberIn, proteinIn);
 		
 	}
 
@@ -441,12 +445,8 @@ public class ItemList
 	}
 	
 	
-	
-	
-	
 	public static void percentDailyValues(String totalFatIn, String saturatedFatIn, String transFattyAcidIn, String polyunsaturatedFatIn,String monounsaturatedFatIn,
-			String colesterolIn,String sodiumIn, String totalCarbohydrateIn, String dietaryFiberIn, String proteinIn, String vitaminAIn, String vitaminCIn,
-			String calciumIn, String ironIn)
+			String colesterolIn,String sodiumIn, String totalCarbohydrateIn, String dietaryFiberIn, String proteinIn)
 	{
 		int totalfat = 65;
 		int saturatedFat = 20;
@@ -455,22 +455,84 @@ public class ItemList
 		int TotalCarbohydrate = 300;
 		int DietaryFiber = 25;
 		int Protein	= 50;
-		int VitaminA = 5000;
-		int VitaminC = 60;
-		int Calcium	= 1000;
-		int Iron = 18;
 		
-		setTotalFatPercentDValue(String.valueOf(Integer.valueOf(totalFatIn) / totalfat));
-		setSatFatPercentDValue(String.valueOf(Integer.valueOf(saturatedFatIn) / saturatedFat));
-		setCholesterolPercentDValue(String.valueOf(Integer.valueOf(colesterolIn) / Cholesterol));
-		setSodiumPercentDValue(String.valueOf(Integer.valueOf(sodiumIn) / Sodium));
-		setTotalCarbPercentDValue(String.valueOf(Integer.valueOf(totalCarbohydrateIn) / TotalCarbohydrate));
-		setDietaryFiberPercentDValue(String.valueOf(Integer.valueOf(dietaryFiberIn) / DietaryFiber));
-		setProteinPercentDValue(String.valueOf(Integer.valueOf(proteinIn) / Protein));
-		setVitaminAPercentDValue(String.valueOf(Integer.valueOf(vitaminAIn) / VitaminA));
-		setVitaminCPercentDValue(String.valueOf(Integer.valueOf(vitaminCIn) / VitaminC));
-		setCalciumPercentDValue(String.valueOf(Integer.valueOf(calciumIn) / Calcium));
-		setIronPercentDValue(String.valueOf(Integer.valueOf(ironIn) / Iron));
+		DecimalFormat df = new DecimalFormat("#,###");
+		
+		if(totalFatIn.equals("null"))
+		{
+			totalFatIn = "0";
+		}
+		if(saturatedFatIn.equals("null"))
+		{
+			saturatedFatIn = "0";
+		}
+		if(transFattyAcidIn.equals("null"))
+		{
+			transFattyAcidIn = "0";
+		}
+		if(polyunsaturatedFatIn.equals("null"))
+		{
+			polyunsaturatedFatIn = "0";
+		}
+		if(monounsaturatedFatIn.equals("null"))
+		{
+			monounsaturatedFatIn = "0";
+		}
+		if(colesterolIn.equals("null"))
+		{
+			colesterolIn = "0";
+		}
+		if(sodiumIn.equals("null"))
+		{
+			sodiumIn = "0";
+		}
+		if(totalCarbohydrateIn.equals("null"))
+		{
+			totalCarbohydrateIn = "0";
+		}
+		if(dietaryFiberIn.equals("null"))
+		{
+			dietaryFiberIn = "0";
+		}
+		if(proteinIn.equals("null"))
+		{
+			proteinIn = "0";
+		}
+		
+		try {
+		
+		float ftTotalFat = Float.valueOf(totalFatIn) / totalfat;	
+		String fatpercent = String.valueOf(df.format(ftTotalFat * 100));
+		setTotalFatPercentDValue(fatpercent);
+		
+		float ftSatFat= Float.valueOf(saturatedFatIn) / saturatedFat;
+		String satPercent = String.valueOf(df.format(ftSatFat * 100));
+		setSatFatPercentDValue(satPercent);
+		
+		float ftCholesterol= Float.valueOf(colesterolIn) / Cholesterol;
+		String cholPercent = String.valueOf(df.format(ftCholesterol * 100));
+		setCholesterolPercentDValue(cholPercent);
+		
+		float ftSodium= Float.valueOf(sodiumIn) / Sodium;
+		String sodiumPercent = String.valueOf(df.format(ftSodium * 100));
+		setSodiumPercentDValue(String.valueOf(sodiumPercent));
+		
+		float ftCarb= Float.valueOf(totalCarbohydrateIn) / TotalCarbohydrate;
+		String carbPercent = String.valueOf(df.format(ftCarb * 100));
+		setTotalCarbPercentDValue(String.valueOf(carbPercent));
+		
+		float ftFiber= Float.valueOf(dietaryFiber) / DietaryFiber;
+		String fiberPercent = String.valueOf(df.format(ftFiber * 100));
+		setDietaryFiberPercentDValue(String.valueOf(fiberPercent));
+
+		float ftProtein= Float.valueOf(proteinIn) / Protein;
+		String proteinPercent = String.valueOf(df.format(ftProtein * 100));
+		setProteinPercentDValue(proteinPercent);
+		
+		} catch(NumberFormatException e)
+			{
+				e.getCause().getMessage();
+			}
 	}
 }
 

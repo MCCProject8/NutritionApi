@@ -67,11 +67,11 @@ public class CreateNutritionLabel
 		html.append("<div class=\"name \">" + title + "</div>");
 	}
 	
-	public void addServingSize(String servingOrder, String servingWeight)
+	public void addServingSize(String servingOrder, String servingUnit, String servingWeight)
 	{
-		html.append("<div class=\"serving\"><div class=\"cf\"><div class=\"servingSizeText fl\">ServingSize:" + servingOrder + "</div><div class=\"servingUnit fl unitHasText"
-				+ "box\">Order</div><div class=\"servingWeightGrams fl gramsHasTextbox\">(" + servingWeight + ")</div></div></div>");
-	}
+		html.append("<div class=\"serving\"><div class=\"cf\"><div class=\"servingSizeText fl\">ServingSize: " + servingOrder + "</div><div class=\"servingUnit fl unitHasText"
++				"box\">("+ servingUnit +")</div><div class=\"servingWeightGrams fl gramsHasTextbox\">(" + servingWeight + ")</div></div></div>");
+	} 
 	
 	public void addLargeBar()
 	{
@@ -101,6 +101,12 @@ public class CreateNutritionLabel
 	public void addLine(String label, String weight)
 	{
 		html.append("<div class=\"line\"><b>" + label + "</b> " + weight + "</div>");
+	}
+	
+	public void addCalLine(String caloriesFromFat,String label,String weight)
+	{
+		html.append("<div class=\"line\"> <div class=\"fr\">Calories From Fat " +caloriesFromFat+"</div><div><b>" + label + "</b> " + weight + "</div>");
+		
 	}
 	
 	public void addIndentedLine(String label, String weight, String percent)

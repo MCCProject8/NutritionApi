@@ -43,7 +43,7 @@ public class Adapter {
 			@Override
 			public void success(itemData itemD, Response response)
 			{
-				WebPanel.getItemInformation(itemD);
+				ItemListener.getItemList(itemD);
 			}
 	
 			@Override

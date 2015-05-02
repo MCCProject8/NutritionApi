@@ -92,7 +92,7 @@ public float servingQty;
 public String servingSizeunit;
 
 @SerializedName("nf_serving_weight_grams")
-public int weightGrams;
+public float weightGrams;
 
 @SerializedName("allergen_contains_milk")
 public String containsMilk;
