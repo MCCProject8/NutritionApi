@@ -9,22 +9,18 @@ public class WebPanel
 {			
 	public static void initFX(final JFXPanel fxPanel, ItemList itemlist)
 	{			
-		fxPanel.setVisible(false);
-		
-		//	I need the loading icon right here.  You can change the sleep timer to make it a bit quicker.
-		//	But this works perfectly for me.  I don't have to click twice anymore.
-		
 		try
 		{
-			Thread.sleep(9000);
-			
+			Thread.sleep(2000);
 		}
 		catch (InterruptedException ex)
 		{
 			System.out.println("Timer inturrupted");
 			Thread.currentThread().interrupt();
+			Main.load.setVisible(false);
+
 		}
-		
+		Main.load.setVisible(true);
 		fxPanel.setVisible(true);
 		
 		Group group = new Group();

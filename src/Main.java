@@ -28,7 +28,6 @@ public class Main extends JFrame {
 	public static ItemList itemList;
 	public static JFXPanel webpanel;
 	public static JLabel load;
-
 	
 	public static void main(String[] args) {
 

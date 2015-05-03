@@ -14,6 +14,8 @@ public class SearchPanel extends JPanel {
 	public static JTextField searchField;
 	public static JButton searchButton;
 	public static JLabel load;
+	public static ImageIcon errorMessage;
+	public static JLabel error;
 	
 	public SearchPanel(){
 		
@@ -32,7 +34,13 @@ public class SearchPanel extends JPanel {
 	    load = new JLabel("loading... ", loading, JLabel.CENTER);
 	    load.setBounds(200,100,100,40);
 		SearchPanel.load.setVisible(false);
-
+		
+		errorMessage = new ImageIcon("ErrorMessage.jpg");
+		error = new JLabel("<html><body>Please check your Internet connection<br> and try again</body></html>",errorMessage, JLabel.CENTER);
+		error.setBounds(10,100,errorMessage.getIconWidth() + 300,errorMessage.getIconHeight());
+		error.setVisible(false);
+		
+		add(error);
 	    add(load);
 		add(searchField);
 		add(searchButton);

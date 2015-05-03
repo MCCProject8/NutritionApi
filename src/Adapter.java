@@ -30,8 +30,9 @@ public class Adapter {
 			@Override
 			public void failure(RetrofitError retrofitError)
 			{
-				retrofitError.getResponse().getReason();
 				SearchPanel.load.setVisible(false);
+				SearchPanel.error.setVisible(true);
+				System.out.println(retrofitError.getResponse().getReason());	
 			}
 		});
 	}
@@ -49,6 +50,8 @@ public class Adapter {
 			@Override
 			public void failure(RetrofitError retrofitError)
 			{
+
+    			Main.load.setVisible(false);
 				System.out.println(retrofitError.getMessage() + " " + retrofitError.getResponse().getReason());
 			}
 		});
